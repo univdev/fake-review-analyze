@@ -1,0 +1,11 @@
+# Task ID: 8
+# Title: Command Line Interface
+# Status: pending
+# Dependencies: 2, 3
+# Priority: medium
+# Description: Implement a CLI for user input and control.
+# Details:
+Accept product URL and max review pages as arguments. Provide usage instructions and feedback. Use argparse or click for CLI handling.
+
+# Test Strategy:
+Test CLI with various inputs. Verify argument parsing and feedback.

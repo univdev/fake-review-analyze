@@ -1,0 +1,11 @@
+# Task ID: 2
+# Title: Implement URL Input and Site Classification
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Accept product URLs from the command line and automatically classify them as Coupang or Naver.
+# Details:
+Parse input URL to determine the platform. Use regex or string matching to identify the domain. Handle invalid URLs with clear error messages. Return the platform type for further processing.
+
+# Test Strategy:
+Test with valid and invalid URLs for both platforms. Verify correct classification and error handling.

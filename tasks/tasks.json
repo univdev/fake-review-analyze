@@ -1,0 +1,137 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Setup Project Repository",
+      "description": "Initialize a Python project repository with proper directory structure, version control, and dependency management.",
+      "details": "Create a new repository with a README, requirements.txt, and a src/ directory. Use git for version control. Set up a virtual environment and install core dependencies (requests, aiohttp, beautifulsoup4, selenium, pandas).",
+      "testStrategy": "Verify repository structure, virtual environment activation, and successful installation of dependencies.",
+      "priority": "high",
+      "dependencies": [],
+      "status": "in-progress",
+      "subtasks": []
+    },
+    {
+      "id": 2,
+      "title": "Implement URL Input and Site Classification",
+      "description": "Accept product URLs from the command line and automatically classify them as Coupang or Naver.",
+      "details": "Parse input URL to determine the platform. Use regex or string matching to identify the domain. Handle invalid URLs with clear error messages. Return the platform type for further processing.",
+      "testStrategy": "Test with valid and invalid URLs for both platforms. Verify correct classification and error handling.",
+      "priority": "high",
+      "dependencies": [
+        1
+      ],
+      "status": "pending",
+      "subtasks": []
+    },
+    {
+      "id": 3,
+      "title": "Develop Core Crawler Module",
+      "description": "Implement the core crawling logic for fetching product and review data from Coupang and Naver.",
+      "details": "Use requests/aiohttp for HTTP requests. For dynamic content, use Selenium. Implement functions to fetch product details and reviews. Handle pagination and review extraction.",
+      "testStrategy": "Test fetching product and review data from both platforms. Verify data extraction and pagination handling.",
+      "priority": "high",
+      "dependencies": [
+        1,
+        2
+      ],
+      "status": "pending",
+      "subtasks": []
+    },
+    {
+      "id": 4,
+      "title": "Implement Anti-Blocking Measures",
+      "description": "Add mechanisms to avoid detection and blocking by the target sites.",
+      "details": "Rotate User-Agent headers, implement request delays, and handle rate limits. Use proxies if necessary. Respect robots.txt and site-specific rate limits.",
+      "testStrategy": "Test with and without anti-blocking measures. Verify successful crawling without triggering blocks.",
+      "priority": "medium",
+      "dependencies": [
+        3
+      ],
+      "status": "pending",
+      "subtasks": []
+    },
+    {
+      "id": 5,
+      "title": "Data Extraction and Structuring",
+      "description": "Extract and structure review data points as specified in the PRD.",
+      "details": "For each review, extract product name, masked author, date, rating, content, and product ID. Normalize date formats and ensure consistent data types.",
+      "testStrategy": "Verify all required fields are extracted and structured correctly. Test with various review formats.",
+      "priority": "medium",
+      "dependencies": [
+        3
+      ],
+      "status": "pending",
+      "subtasks": []
+    },
+    {
+      "id": 6,
+      "title": "CSV Export and File Naming",
+      "description": "Export structured review data to CSV files with the specified naming convention.",
+      "details": "Use pandas or csv module to export data. File name format: YYYYMMDD_서비스이름_상품코드.csv. Ensure proper encoding and field separation.",
+      "testStrategy": "Verify CSV file creation, naming, and data integrity. Test with multiple products and platforms.",
+      "priority": "medium",
+      "dependencies": [
+        5
+      ],
+      "status": "pending",
+      "subtasks": []
+    },
+    {
+      "id": 7,
+      "title": "Error Handling and Logging",
+      "description": "Implement robust error handling and logging for all major operations.",
+      "details": "Handle network errors, parsing errors, and invalid data. Log errors and warnings for debugging. Provide meaningful error messages to users.",
+      "testStrategy": "Simulate network failures and invalid data. Verify error messages and logging.",
+      "priority": "medium",
+      "dependencies": [
+        3,
+        5
+      ],
+      "status": "pending",
+      "subtasks": []
+    },
+    {
+      "id": 8,
+      "title": "Command Line Interface",
+      "description": "Implement a CLI for user input and control.",
+      "details": "Accept product URL and max review pages as arguments. Provide usage instructions and feedback. Use argparse or click for CLI handling.",
+      "testStrategy": "Test CLI with various inputs. Verify argument parsing and feedback.",
+      "priority": "medium",
+      "dependencies": [
+        2,
+        3
+      ],
+      "status": "pending",
+      "subtasks": []
+    },
+    {
+      "id": 9,
+      "title": "Performance Optimization",
+      "description": "Optimize memory usage and parsing speed for large datasets.",
+      "details": "Stream data processing to avoid memory overload. Optimize parsing logic and request batching. Profile and refactor as needed.",
+      "testStrategy": "Test with large review sets. Monitor memory usage and execution time.",
+      "priority": "low",
+      "dependencies": [
+        3,
+        5
+      ],
+      "status": "pending",
+      "subtasks": []
+    },
+    {
+      "id": 10,
+      "title": "Documentation and Deployment",
+      "description": "Write user and developer documentation. Prepare for deployment.",
+      "details": "Document installation, usage, and configuration. Prepare setup.py or requirements.txt for deployment. Add example usage and troubleshooting tips.",
+      "testStrategy": "Verify documentation completeness and deployment instructions.",
+      "priority": "low",
+      "dependencies": [
+        1,
+        8
+      ],
+      "status": "pending",
+      "subtasks": []
+    }
+  ]
+}
