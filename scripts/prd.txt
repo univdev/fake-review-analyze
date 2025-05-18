@@ -1,0 +1,89 @@
+# Fake Review Analyzer - Product Requirements Document
+
+## Project Overview
+The Fake Review Analyzer is a Python-based tool designed to crawl and analyze product reviews from major Korean e-commerce platforms (Coupang and Naver Shopping). The tool aims to help identify patterns and characteristics of fake reviews by collecting and analyzing review data.
+
+## Core Features
+
+### 1. Multi-Platform Review Crawling
+- Support for multiple e-commerce platforms:
+  * Coupang
+  * Naver Shopping
+- Unified crawling interface for consistent data collection
+- Flexible URL parsing and validation
+- Configurable page navigation and review collection
+
+### 2. Data Collection & Storage
+- Comprehensive review data model including:
+  * Review text content
+  * Rating information
+  * Image attachments
+  * Reviewer metadata
+- CSV export functionality for data analysis
+- Error handling and retry mechanisms
+- Progress tracking and reporting
+
+### 3. Technical Requirements
+
+#### Development Environment
+- Python 3.8+
+- Selenium WebDriver for dynamic content
+- BeautifulSoup4 for HTML parsing
+- Environment variable management with python-dotenv
+
+#### Core Dependencies
+- selenium==4.15.2
+- selenium-wire==5.1.0
+- beautifulsoup4==4.12.2
+- webdriver-manager==4.0.1
+- python-dotenv==1.0.0
+
+### 4. Project Structure
+```
+src/
+├── models/
+│   └── review.py
+├── utils/
+│   ├── url_parser.py
+│   ├── page_navigator.py
+│   └── csv_exporter.py
+├── crawlers/
+│   ├── base_crawler.py
+│   ├── coupang_crawler.py
+│   ├── naver_crawler.py
+│   └── crawler_factory.py
+└── crawl_reviews.py
+tests/
+├── test_url_parser.py
+└── test_page_navigator.py
+```
+
+## Implementation Status
+
+### Completed Features
+1. Project initialization and structure setup
+2. Basic crawler interface and site-specific implementations
+3. URL parsing and validation
+4. Page navigation module
+5. Review data models
+6. CSV export functionality
+7. Main crawling script
+
+### Pending Features
+1. Enhanced error handling and retry logic
+2. Rate limiting and request throttling
+3. Proxy support for avoiding IP blocks
+4. Review sentiment analysis
+5. Fake review detection algorithms
+6. Data visualization and reporting
+7. Command-line interface improvements
+8. Configuration file support
+9. Logging enhancements
+10. Unit test coverage expansion
+
+## Success Criteria
+1. Successful crawling of reviews from both Coupang and Naver Shopping
+2. Accurate parsing and storage of review data
+3. Robust error handling and recovery
+4. Comprehensive test coverage
+5. Clear documentation and usage instructions

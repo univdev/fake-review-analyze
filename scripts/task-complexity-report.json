@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "generatedAt": "2025-05-18T17:27:43.737Z",
+    "tasksAnalyzed": 15,
+    "thresholdScore": 5,
+    "projectName": "Taskmaster",
+    "usedResearch": false
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "프로젝트 초기 설정 및 환경 구성",
+      "complexityScore": 5,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Expand task 1 into 4 subtasks: 1) Repository setup and basic structure, 2) Python environment and dependencies, 3) Configuration files and logging, 4) Frontend initialization",
+      "reasoning": "Medium complexity due to multiple environments and configurations. Requires technical setup but follows standard practices. Breaking into repository, environment, configuration, and frontend components is logical."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "데이터베이스 설계 및 구현",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Expand task 2 into 5 subtasks: 1) Database schema design, 2) SQLAlchemy ORM model implementation, 3) Database migration system, 4) Data backup implementation, 5) Query optimization and indexing",
+      "reasoning": "Higher complexity due to multiple related tables, relationships, migration system, and optimization requirements. Requires careful design to support all analysis features."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "쿠팡 리뷰 크롤러 개발",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Expand task 3 into 6 subtasks: 1) Coupang page structure analysis, 2) HTML parsing implementation, 3) Data extraction logic, 4) Pagination and error handling, 5) Database integration, 6) Monitoring and logging system",
+      "reasoning": "High complexity due to external dependency on Coupang's website structure, error handling, pagination, and potential anti-scraping measures. Requires robust implementation to handle various edge cases."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "네이버 쇼핑몰 리뷰 크롤러 개발",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Expand task 4 into 6 subtasks: 1) Naver shopping page structure analysis, 2) HTML parsing implementation, 3) Data extraction logic, 4) Pagination and error handling, 5) Database integration, 6) API integration exploration",
+      "reasoning": "Similar complexity to Coupang crawler but with additional API integration possibility. Naver's structure may differ significantly, requiring separate analysis and implementation approach."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "데이터 전처리 및 정규화 모듈 개발",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Expand task 5 into 4 subtasks: 1) Text normalization implementation, 2) Date standardization and missing value handling, 3) Duplicate detection algorithm, 4) Batch processing system",
+      "reasoning": "Medium-high complexity due to various text normalization requirements and batch processing needs. Natural language processing aspects add complexity but are well-defined in scope."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "텍스트 기반 가짜 리뷰 분석 모듈 개발",
+      "complexityScore": 9,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Expand task 6 into 7 subtasks: 1) Sentiment analysis implementation, 2) Pattern detection algorithms, 3) Keyword relevance analysis, 4) Length analysis implementation, 5) Scoring system development, 6) Threshold calibration, 7) Performance optimization",
+      "reasoning": "Very high complexity due to NLP challenges, multiple analysis criteria, and algorithm development needs. Core functionality requiring sophisticated text analysis and scoring mechanisms."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "작성자 패턴 분석 모듈 개발",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Expand task 7 into 5 subtasks: 1) Author activity pattern analysis, 2) Seller-focused review detection, 3) Rating pattern analysis, 4) Author history database implementation, 5) Scoring and threshold system",
+      "reasoning": "High complexity due to pattern recognition across multiple dimensions and need for historical data analysis. Requires statistical analysis and pattern detection algorithms."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "시간대별 리뷰 분석 모듈 개발",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Expand task 8 into 5 subtasks: 1) Time-series analysis algorithm implementation, 2) Anomaly detection system, 3) Periodic pattern recognition, 4) Scoring mechanism development, 5) Visualization data preparation",
+      "reasoning": "Significant complexity due to time-series analysis and anomaly detection requirements. Statistical methods needed for identifying unusual patterns in temporal data."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "종합 가짜 리뷰 판단 시스템 개발",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Expand task 9 into 6 subtasks: 1) Integration algorithm development, 2) Weighting system implementation, 3) Final probability calculation, 4) Threshold calibration system, 5) Detailed reasoning generation, 6) Feedback mechanism implementation",
+      "reasoning": "High complexity as it integrates multiple analysis modules and requires sophisticated weighting and calibration. Core system that determines overall effectiveness of fake review detection."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "FastAPI 기반 백엔드 서버 개발",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Expand task 10 into 5 subtasks: 1) API structure and endpoint design, 2) Request/response model implementation, 3) Authentication system, 4) Async task processing, 5) Documentation and security implementation",
+      "reasoning": "Significant complexity due to multiple endpoints, authentication requirements, async processing, and security considerations. Requires robust API design and implementation."
+    },
+    {
+      "taskId": 11,
+      "taskTitle": "React 기반 프론트엔드 개발 - 기본 구조",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Expand task 11 into 4 subtasks: 1) Project structure and component hierarchy, 2) Routing and state management, 3) API communication module, 4) Core UI components implementation",
+      "reasoning": "Medium complexity focusing on architectural decisions and foundation components. Requires solid React knowledge but follows established patterns."
+    },
+    {
+      "taskId": 12,
+      "taskTitle": "React 기반 프론트엔드 개발 - 기능 구현",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Expand task 12 into 5 subtasks: 1) Crawling control interface, 2) Monitoring dashboard implementation, 3) Data query and filtering UI, 4) Analysis results display, 5) Settings and error handling UI",
+      "reasoning": "Higher complexity than basic structure due to feature-specific implementations and API integrations. Requires careful UX design for complex functionality."
+    },
+    {
+      "taskId": 13,
+      "taskTitle": "데이터 시각화 컴포넌트 개발",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Expand task 13 into 5 subtasks: 1) Visualization library integration, 2) Chart component implementation, 3) Interactive features development, 4) Responsive design implementation, 5) Export functionality",
+      "reasoning": "Significant complexity due to various chart types, interactivity requirements, and responsive design needs. Data visualization requires both technical and design expertise."
+    },
+    {
+      "taskId": 14,
+      "taskTitle": "리포트 생성 및 다운로드 기능 개발",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Expand task 14 into 4 subtasks: 1) Report template design, 2) Multiple format export implementation, 3) Report content generation logic, 4) Frontend download functionality",
+      "reasoning": "Medium complexity with focus on formatting, multiple export formats, and content organization. Technical challenges include handling large reports and proper formatting."
+    },
+    {
+      "taskId": 15,
+      "taskTitle": "시스템 통합 테스트 및 배포",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Expand task 15 into 6 subtasks: 1) Integration test plan development, 2) Test execution and bug fixing, 3) Deployment environment setup, 4) CI/CD pipeline configuration, 5) Documentation finalization, 6) Monitoring system implementation",
+      "reasoning": "High complexity due to system-wide integration, multiple test types, deployment configuration, and documentation requirements. Critical final phase requiring thorough verification."
+    }
+  ]
+}
