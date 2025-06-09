@@ -26,12 +26,13 @@ import { CrawlerHelper } from './interface/crawler-helper.interface.js';
   let crawler: CrawlerHelper;
   const context = await browser.newContext();
   const page = await context.newPage();
-  await page.goto(url);
 
   const siteName = getSiteName(url);
 
+  console.log(`Crawling ${url}...`);
+
   if (siteName === SUPPORT_SHOP_NAME["11st"]) {
-    crawler = new St11(page, url);
+    crawler = new St11(page, url, maxCount);
     await crawler.getReviewList(maxCount);
   }
 })();
